@@ -4,6 +4,8 @@ console.log('javascript')
 import Layout from '../layouts/Layout.astro';
 import SearchBar from '../components/SearchBar.astro';
 import Footer from '../components/Footer.astro';
+
+
 import { Image } from 'astro:assets';
 import productImage1 from '../assets/products-img/1.jpg'
 import productImage2 from '../assets/products-img/2.jpg'
@@ -40,6 +42,8 @@ import productImage32 from '../assets/products-img/32.jpg'
 import productImage33 from '../assets/products-img/33.jpg'
 import productImage34 from '../assets/products-img/34.jpg'
 import PriceModal from '../components/PriceModal.astro';
+import heartOff from '../assets/icons/heart-off.png';
+import heartOn from '../assets/icons/heart-on.png';
 
 ---
 
@@ -49,6 +53,7 @@ import PriceModal from '../components/PriceModal.astro';
 
     
     <section id="Projects" class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 justify-items-center gap-y-20 gap-x-14 mt-10 mb-5">
+
         <div id="product-1" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
             <Image src={productImage1} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
             <div class="px-4 py-3 w-72">
@@ -61,10 +66,17 @@ import PriceModal from '../components/PriceModal.astro';
                     <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Amor Dorado">
                         Cotizar
                     </button>
+                    <button class="like-button" data-product-id="1">
+                        <Image 
+                            src={heartOff} 
+                            alt="Like" 
+                            class="heart-icon w-6 h-6" 
+                            data-liked="false" 
+                        />
+                    </button>
                 </div>
             </div>
         </div>
-        
 
         <div id="product-2" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="otros">
             <Image src={productImage2} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
@@ -78,9 +90,18 @@ import PriceModal from '../components/PriceModal.astro';
                     <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Encanto Yeti">
                         Cotizar
                     </button>
+                    <button class="like-button" data-product-id="2">
+                        <Image 
+                            src={heartOff} 
+                            alt="Like" 
+                            class="heart-icon w-6 h-6" 
+                            data-liked="false" 
+                        />
+                    </button>
                 </div>
             </div>
         </div>
+
         <div id="product-3" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
             <Image src={productImage3} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
             <div class="px-4 py-3 w-72">
@@ -92,6 +113,14 @@ import PriceModal from '../components/PriceModal.astro';
                 <div class="flex items-center justify-between mt-3">
                     <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Jardín Vivo">
                         Cotizar
+                    </button>
+                    <button class="like-button" data-product-id="3">
+                        <Image 
+                            src={heartOff} 
+                            alt="Like" 
+                            class="heart-icon w-6 h-6" 
+                            data-liked="false" 
+                        />
                     </button>
                 </div>
             </div>
@@ -109,10 +138,17 @@ import PriceModal from '../components/PriceModal.astro';
                     <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Tesoros de Mamá">
                         Cotizar
                     </button>
+                    <button class="like-button" data-product-id="4">
+                        <Image 
+                            src={heartOff} 
+                            alt="Like" 
+                            class="heart-icon w-6 h-6" 
+                            data-liked="false" 
+                        />
+                    </button>
                 </div>
             </div>
         </div>
-        
 
         <div id="product-5" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
             <Image src={productImage5} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
@@ -125,11 +161,18 @@ import PriceModal from '../components/PriceModal.astro';
                 <div class="flex items-center justify-between mt-3">
                     <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Sueño Rosa">
                         Cotizar
+                    </button>
+                    <button class="like-button" data-product-id="5">
+                        <Image 
+                            src={heartOff} 
+                            alt="Like" 
+                            class="heart-icon w-6 h-6" 
+                            data-liked="false" 
+                        />
+                    </button>
                 </div>
             </div>
         </div>
-        
-        
 
         <div id="product-6" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="canasta">
             <Image src={productImage6} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
@@ -143,11 +186,17 @@ import PriceModal from '../components/PriceModal.astro';
                     <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Pet Love">
                         Cotizar
                     </button>
+                    <button class="like-button" data-product-id="6">
+                        <Image 
+                            src={heartOff} 
+                            alt="Like" 
+                            class="heart-icon w-6 h-6" 
+                            data-liked="false" 
+                        />
+                    </button>
                 </div>
             </div>
         </div>
-        
-        
 
         <div id="product-7" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
             <Image src={productImage7} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
@@ -161,10 +210,17 @@ import PriceModal from '../components/PriceModal.astro';
                     <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Corazón Escarlata">
                         Cotizar
                     </button>
+                    <button class="like-button" data-product-id="7">
+                        <Image 
+                            src={heartOff} 
+                            alt="Like" 
+                            class="heart-icon w-6 h-6" 
+                            data-liked="false" 
+                        />
+                    </button>
                 </div>
             </div>
         </div>
-        
 
         <div id="product-8" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
             <Image src={productImage8} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
@@ -178,12 +234,17 @@ import PriceModal from '../components/PriceModal.astro';
                     <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Luz Dorada">
                         Cotizar
                     </button>
+                    <button class="like-button" data-product-id="8">
+                        <Image 
+                            src={heartOff} 
+                            alt="Like" 
+                            class="heart-icon w-6 h-6" 
+                            data-liked="false" 
+                        />
+                    </button>
                 </div>
             </div>
         </div>
-        
-
-
 
         <div id="product-9" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="otros">
             <Image src={productImage9} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -197,10 +258,17 @@ import PriceModal from '../components/PriceModal.astro';
                     <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Dulce Calor">
                         Cotizar
                     </button>
+                    <button class="like-button" data-product-id="9">
+                        <Image 
+                            src={heartOff} 
+                            alt="Like" 
+                            class="heart-icon w-6 h-6" 
+                            data-liked="false" 
+                        />
+                    </button>
                 </div>
             </div>
         </div>
-        
 
         <div id="product-10" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="canasta">
             <Image src={productImage10} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -214,14 +282,18 @@ import PriceModal from '../components/PriceModal.astro';
                     <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Dulce Romántico">
                         Cotizar
                     </button>
+                    <button class="like-button" data-product-id="10">
+                        <Image 
+                            src={heartOff} 
+                            alt="Like" 
+                            class="heart-icon w-6 h-6" 
+                            data-liked="false" 
+                        />
+                    </button>
                 </div>
             </div>
         </div>
-        
 
-
-
-    
         <div id="product-11" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
             <Image src={productImage11} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
@@ -234,10 +306,17 @@ import PriceModal from '../components/PriceModal.astro';
                     <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Rosa Pastel">
                         Cotizar
                     </button>
+                    <button class="like-button" data-product-id="11">
+                        <Image 
+                            src={heartOff} 
+                            alt="Like" 
+                            class="heart-icon w-6 h-6" 
+                            data-liked="false" 
+                        />
+                    </button>
                 </div>
             </div>
         </div>
-        
 
         <div id="product-12" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="otros">
             <Image src={productImage12} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -251,12 +330,17 @@ import PriceModal from '../components/PriceModal.astro';
                     <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Abrazo Floral">
                         Cotizar
                     </button>
+                    <button class="like-button" data-product-id="12">
+                        <Image 
+                            src={heartOff} 
+                            alt="Like" 
+                            class="heart-icon w-6 h-6" 
+                            data-liked="false" 
+                        />
+                    </button>
                 </div>
             </div>
         </div>
-        
-
-
 
     <div id="product-13" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
     <Image src={productImage13} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -270,10 +354,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Amor Literario">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="13">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-14" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
     <Image src={productImage14} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -287,10 +378,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Ternura Rosada">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="14">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-15" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
     <Image src={productImage15} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -304,10 +402,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Princesa Dulce">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="15">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-16" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
     <Image src={productImage16} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -321,10 +426,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Cielo de Chocolate">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="16">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-17" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
     <Image src={productImage17} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -338,10 +450,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Aura Floral">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="17">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-18" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
     <Image src={productImage18} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -355,10 +474,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Sueños Delicados">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="18">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-19" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
     <Image src={productImage19} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -372,14 +498,18 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Perfume de Amor">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="19">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
 
-
-
-
-    
 <div id="product-20" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
     <Image src={productImage20} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
     <div class="px-4 py-3 w-72">
@@ -392,10 +522,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Punto de Rosas">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="20">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-21" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
     <Image src={productImage21} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -409,10 +546,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Eterna Rosa">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="21">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-22" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
     <Image src={productImage22} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -426,10 +570,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Sol y Rosas">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="22">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-23" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
     <Image src={productImage23} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -443,10 +594,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Riqueza Floral">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="23">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-24" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
     <Image src={productImage24} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -460,10 +618,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Princesa de Chocolate">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="24">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-25" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
     <Image src={productImage25} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -481,18 +646,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Refugio Literario">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="25">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
 
 <div id="product-26" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
     <Image src={productImage26} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -506,10 +670,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Dulce Aniversario">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="26">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-27" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
     <Image src={productImage27} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -523,10 +694,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Pasión y Carta">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="27">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-28" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="otros">
     <Image src={productImage28} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -540,10 +718,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Corona de Honor">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="28">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-29" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
     <Image src={productImage29} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -557,10 +742,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Fragancia Azul">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="29">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-30" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
     <Image src={productImage30} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -574,15 +766,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Trío de Rosas">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="30">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
-
-
-
-
-
 
 <div id="product-31" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
     <Image src={productImage31} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -596,10 +790,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Cumple Rosa">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="31">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-32" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
     <Image src={productImage32} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -613,10 +814,17 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Mariposa Roja">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="32">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
-
 
 <div id="product-33" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
     <Image src={productImage33} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -629,6 +837,14 @@ import PriceModal from '../components/PriceModal.astro';
         <div class="flex items-center justify-between mt-3">
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Graduación Floral">
                 Cotizar
+            </button>
+            <button class="like-button" data-product-id="33">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
             </button>
         </div>
     </div>
@@ -647,6 +863,14 @@ import PriceModal from '../components/PriceModal.astro';
             <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Estrellas y Flores">
                 Cotizar
             </button>
+            <button class="like-button" data-product-id="34">
+                <Image 
+                    src={heartOff} 
+                    alt="Like" 
+                    class="heart-icon w-6 h-6" 
+                    data-liked="false" 
+                />
+            </button>
         </div>
     </div>
 </div>
@@ -655,8 +879,52 @@ import PriceModal from '../components/PriceModal.astro';
     </section>
 
     <Footer />
+    
     <!-- Scripts -->
+    <script define:vars={{heartOffSrc: heartOff.src, heartOnSrc: heartOn.src}}>
+        document.addEventListener('DOMContentLoaded', () => {
+            const likeButtons = document.querySelectorAll('.like-button');
+            
+            likeButtons.forEach(button => {
+                const productId = button.getAttribute('data-product-id');
+                const heartIcon = button.querySelector('.heart-icon');
+                
+                if (productId && heartIcon && heartIcon instanceof HTMLImageElement) {
+                    // Revisa si el like ya esta en localStorage
+                    const isLiked = localStorage.getItem(`product-like-${productId}`) === 'true';
+                    if (isLiked) {
+                        heartIcon.src = heartOnSrc;
+                        heartIcon.setAttribute('data-liked', 'true');
+                    }
+                    
+                    button.addEventListener('click', () => {
+                        // Ensure heartIcon is an HTMLImageElement
+                        if (!(heartIcon instanceof HTMLImageElement)) return;
+                        
+                        const currentState = heartIcon.getAttribute('data-liked') === 'true';
+                        
+                        if (currentState) {
+                            // Con esta seccion quitamos el like
+                            heartIcon.src = heartOffSrc;
+                            heartIcon.setAttribute('data-liked', 'false');
+                            localStorage.removeItem(`product-like-${productId}`);
+                        } else {
+                            //Damos like al producto
+                            heartIcon.src = heartOnSrc;
+                            heartIcon.setAttribute('data-liked', 'true');
+                            localStorage.setItem(`product-like-${productId}`, 'true');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+
+
+
     <script>
+
         // FILTRAR PRODUCTOS
 const categoryButtons = document.querySelectorAll('.category');
 const productCards = document.querySelectorAll('.product-card') as NodeListOf<HTMLElement>;
