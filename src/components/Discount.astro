@@ -1,0 +1,221 @@
+---
+console.log('javascript')
+---
+<div class="fixed bottom-4 right-4 z-40 w-[140px] sm:w-[160px] md:w-[180px] lg:absolute lg:right-24 lg:top-1/2 lg:-translate-y-1/2 lg:w-[240px]">
+  <div class="gift-bag scale-75 sm:scale-85 md:scale-90 lg:scale-100">
+    <div class="handle-wrapper">
+      <div class="single-handle"></div>
+    </div>
+
+    <div class="bag-body relative overflow-hidden rounded-xl shadow-2xl">
+      <div class="shine-effect"></div>
+      
+      <div class="bag-top">
+        <div class="bag-ruffle"></div>
+      </div>
+      
+      <div class="sparkle star sparkle1">✨</div>
+      <div class="sparkle star sparkle2">✨</div>
+      <div class="sparkle star sparkle3">✨</div>
+      <div class="sparkle flower sparkle4">🌸</div>
+      <div class="sparkle flower sparkle5">🌺</div>
+      <div class="sparkle flower sparkle6">💐</div>
+      
+      <div class="relative p-3 lg:p-6 text-center">
+        <div class="mb-2 lg:mb-4">
+          <h3 class="text-base lg:text-2xl font-bold text-white mb-1 lg:mb-2 glow-text">
+            ¡Tu regalo especial!
+          </h3>
+          <p class="text-white text-xs lg:text-base mb-2 lg:mb-4 animate-bounce">
+            ¡Descuento exclusivo!
+          </p>
+        </div>
+        
+        <div class="gift-tag bg-white bg-opacity-90 backdrop-blur-sm p-2 lg:p-3 rounded-lg shadow-inner mb-2 lg:mb-4">
+          <p class="text-pink-600 text-[10px] lg:text-sm mb-1">Tu código especial:</p>
+          <div class="discount-code font-mono text-sm lg:text-xl font-bold text-pink-600 tracking-wider">
+            JCT1508
+          </div>
+        </div>
+        
+        <div class="text-white">
+          <p class="text-xs lg:text-lg font-semibold mb-1 shine-text">
+            5% DE DESCUENTO
+          </p>
+          <p class="text-[8px] lg:text-xs">
+            *En tu primera compra
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <style>
+    .gift-bag-container {
+    animation: floatIn 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+  }
+  
+  .gift-bag {
+    transform-origin: top center;
+    animation: swayBag 8s ease-in-out infinite;
+  }
+  
+    .handle-wrapper {
+      position: absolute;
+      top: -25px; /* Agarradero más arriba */
+      left: 0;
+      right: 0;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      z-index: 1;
+    }
+  
+    .single-handle {
+      width: 60px;
+      height: 100%;
+      border: 5px solid #ff47a8;
+      border-bottom: none;
+      border-radius: 30px 30px 0 0;
+      animation: handleSway 8s ease-in-out infinite; /* Sincronizado con el movimiento de la bolsa */
+      background: transparent; /* Sin relleno */
+    }
+  
+    .bag-body {
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .bag-top {
+      height: 30px;
+      background: linear-gradient(135deg, #ff8dc2, #ff47a8);
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .bag-ruffle {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.3),
+        rgba(255,255,255,0.3) 5px,
+        transparent 5px,
+        transparent 10px
+      );
+      animation: ruffleWave 2s linear infinite;
+    }
+  
+    .shine-effect {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+      );
+      animation: shine 3s infinite;
+    }
+  
+    .sparkle {
+      position: absolute;
+      font-size: 1.2rem;
+      opacity: 0;
+      animation: twinkle 2s infinite;
+    }
+  
+    /* Posiciones de estrellas y flores */
+    .sparkle1 { top: 20%; left: 10%; animation-delay: 0s; }
+    .sparkle2 { top: 40%; right: 15%; animation-delay: 0.7s; }
+    .sparkle3 { bottom: 30%; left: 20%; animation-delay: 1.4s; }
+    .sparkle4 { top: 25%; right: 20%; animation-delay: 0.3s; }
+    .sparkle5 { bottom: 40%; right: 25%; animation-delay: 1s; }
+    .sparkle6 { bottom: 20%; left: 15%; animation-delay: 1.7s; }
+  
+    .gift-tag {
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .discount-code {
+      position: relative;
+      animation: pulseScale 2s infinite;
+    }
+  
+    .glow-text {
+      text-shadow: 0 0 10px rgba(255,255,255,0.7);
+      animation: glowPulse 2s infinite;
+    }
+  
+    /* Animaciones */
+    @keyframes floatIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-100%) scale(0.8);
+      }
+      70% {
+        transform: translateY(-40%) scale(1.05);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+      }
+    }
+  
+    @keyframes swayBag {
+      0%, 100% { transform: rotate(-1.5deg); } /* Reducido el ángulo de balanceo */
+      50% { transform: rotate(1.5deg); }
+    }
+  
+    @keyframes handleSway {
+      0%, 100% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
+    }
+  
+    @keyframes shine {
+      0% { transform: translateX(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) rotate(45deg); }
+    }
+  
+    @keyframes twinkle {
+      0%, 100% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+  
+    @keyframes ruffleWave {
+      0% { background-position: 0 0; }
+      100% { background-position: 20px 0; }
+    }
+  
+    @keyframes pulseScale {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+  
+    @keyframes glowPulse {
+      0%, 100% { text-shadow: 0 0 10px rgba(255,255,255,0.7); }
+      50% { text-shadow: 0 0 20px rgba(255,255,255,0.9), 0 0 30px rgba(255,255,255,0.7); }
+    }
+  
+    /* Responsive */
+    @media (max-width: 640px) {
+      .gift-bag-container {
+        width: 200px;
+      }
+      
+      .single-handle {
+        width: 50px;
+      }
+    }
+  </style>

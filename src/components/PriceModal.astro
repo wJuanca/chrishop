@@ -1,0 +1,49 @@
+<!-- Main modal -->
+<div id="default-modal" tabindex="-1" aria-hidden="true" class="overflow-y-auto overflow-x-hidden fixed top-0 left-0 right-0 bottom-0 z-50 flex justify-center items-center w-full h-full bg-gray-800 bg-opacity-50 hidden">
+    <div class="relative p-4 w-full max-w-2xl max-h-full bg-white rounded-lg shadow dark:bg-gray-700">
+      <!-- Modal content -->
+      <div class="relative">
+        <!-- Modal header -->
+        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Información sobre los precios
+          </h3>
+        </div>
+        <!-- Modal body -->
+        <div class="p-4 md:p-5 space-y-4">
+          <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+            Los precios mostrados en esta página son aproximados y pueden variar después de una cotización personalizada.
+            Los factores que afectan el precio incluyen la ubicación de envío, el tamaño, la temporada y la personalización del
+            producto.
+          </p>
+          <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+            Para obtener un precio exacto, por favor, solicita una cotización personalizada.
+          </p>
+        </div>
+        <!-- Modal footer -->
+        <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+          <button id="accept-btn" type="button" class="text-white bg-pink hover:bg-pink2 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+            Acepto
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('default-modal');
+      const acceptButton = document.getElementById('accept-btn');
+      
+      // Mostrar el modal cuando se carga la página
+      modal.classList.remove('hidden');
+      
+      // Función para cerrar el modal
+      const closeModal = () => {
+        modal.classList.add('hidden');
+      };
+      
+      // Evento de cierre cuando se presiona el botón "Aceptar"
+      acceptButton.addEventListener('click', closeModal);
+    });
+  </script>

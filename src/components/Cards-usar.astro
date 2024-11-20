@@ -1,0 +1,46 @@
+---
+console.log('javascript')
+const { title, description} = Astro.props;
+---
+
+<div class="group perspective">
+    <div class="relative h-[300px] w-full sm:w-[350px] rounded-2xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+      <!-- Front of the card -->
+      <div class="absolute inset-0">
+        <div class="h-full w-full rounded-2xl p-8 shadow-xl [backface-visibility:hidden] 
+          bg-gradient-to-br from-white/10 to-white/30 backdrop-blur-lg
+          border border-white/20 hover:border-white/40
+          transition-all duration-300 ease-in-out
+          before:absolute before:inset-0 before:h-full before:w-full before:rounded-2xl
+          before:bg-gradient-to-br before:from-purple-500/20 before:to-cyan-500/20
+          before:opacity-0 before:transition-opacity before:duration-300
+          hover:before:opacity-100
+          group-hover:scale-105">
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              {title}
+            </h3>
+            <p class="text-gray-200 leading-relaxed">
+              {description}
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Back of the card -->
+      <div class="absolute inset-0 h-full w-full rounded-2xl bg-black/80 px-8 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+        <div class="flex min-h-full flex-col items-center justify-center">
+          <h3 class="text-xl font-bold text-white mb-2">¡Descubre más!</h3>
+          <button class="mt-4 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 px-6 py-2 text-white hover:opacity-90 transition-opacity">
+            Explorar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .perspective {
+      perspective: 1000px;
+    }
+  </style>

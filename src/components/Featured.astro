@@ -1,0 +1,19 @@
+---
+console.log('javascript')
+const { producto } = Astro.props;
+---
+
+<div 
+  id={`product-${producto.name}`} 
+  class="w-64 mx-auto bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card"
+  data-category="floristería"
+>
+  <img src={producto.imgSrc} alt={producto.name} class="h-48 w-full object-cover rounded-t-xl" />
+  <div class="px-4 py-3 w-full text-left">
+    <p class="text-base font-bold text-black truncate block capitalize">{producto.name}</p>
+    <span class="text-gray-400 mr-3 uppercase text-xs block mt-1">{producto.description}</span>
+    <div class="flex items-start">
+      <p class="text-base font-semibold text-black cursor-auto my-2">{producto.price}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+---
+console.log('javascript')
+import { Image } from 'astro:assets';
+import face from '../assets/icons/facebook.png';
+import insta from '../assets/icons/instagram.png';
+---
+
+
+<footer class="bg-[#F8F0E3] py-10 px-5 text-left text-gray-800 font-sans">
+    <hr class="border-0 h-[1px] bg-gray-300 mb-5">
+    <div class="footer-content flex flex-col lg:flex-row flex-wrap justify-between gap-10 max-w-6xl mx-auto">
+        
+        <!-- Columna Izquierda - Menú -->
+        <div class="footer-column-left flex-1 px-5 mb-10 lg:mb-0">
+            <h3 class="text-lg font-semibold text-gray-800">Oye, aquí hay algunas cosas más</h3>
+            <div class="menu-columns flex flex-wrap justify-between mt-4">
+                <ul class="space-y-2 sm:w-1/2 lg:w-full">
+                    <li><a href="/nojava/" class="text-gray-800 hover:text-[#F8A8C1] transition">Inicio</a></li>
+                    <li><a href="/nojava/products" class="text-gray-800 hover:text-[#F8A8C1] transition">Productos</a></li>
+                    <li><a href="/nojava/about" class="text-gray-800 hover:text-[#F8A8C1] transition">Sobre Nosotros</a></li>
+                    <li><a href="/nojava/contact" class="text-gray-800 hover:text-[#F8A8C1] transition">Contactanos</a></li>
+                </ul>
+                <ul class="space-y-2 sm:w-1/2 lg:w-full">
+                    <li><a href="/nojava/blog" class="text-gray-800 hover:text-[#F8A8C1] transition">Blog</a></li>
+                    <li><a href="/nojava/t&c" class="text-gray-800 hover:text-[#F8A8C1] transition">Terminos</a></li>
+                    <li><a href="/nojava/faq" class="text-gray-800 hover:text-[#F8A8C1] transition">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Columna Central - Redes Sociales -->
+        <div class="social-section text-center mb-10 lg:mb-0 flex-1 px-5">
+            <h2 class="text-xl font-semibold text-gray-800 mb-5">Síguenos</h2>
+            <div class="social-icons flex justify-center gap-5">
+                <a href="https://www.facebook.com/onlinechrishop" target="_blank" class="social-icon">
+                    <Image src={face} alt="Facebook" class="w-10 h-10 object-cover" loading="lazy">
+                </a>
+                <a href="https://www.instagram.com/___chrishop____/" target="_blank" class="social-icon">
+                    <Image src={insta} alt="Instagram" class="w-10 h-10 object-cover" loading="lazy">
+                </a>
+            </div>
+        </div>
+        
+        <!-- Columna Derecha - Historia y Contacto -->
+        <div class="footer-column flex-1 px-5">
+            <h3 class="text-lg font-semibold text-gray-800">Chrishop</h3>
+            <p class="text-sm text-gray-600 mt-2">En Chrishop, nos apasiona ofrecer las mejores flores y arreglos para todos los momentos especiales de tu vida. Ubicados en San Francisco de la Paz, Olancho, Honduras, nuestra floristería ofrece calidad y servicio excepcional.</p>
+            <p class="text-sm text-gray-600 mt-2">chrishopcontact@gmail.com</p>
+            <p class="text-sm text-gray-600 mt-2">Esquina Opuesta del Cementerio General, San Francisco de la Paz, Olancho</p>
+        </div>
+    </div>
+
+    <!-- Derechos Reservados - Ahora fuera del grid principal -->
+    <div class="footer-bottom text-center mt-10 text-sm text-gray-600">
+        <p>© 2024 Chrishop. Todos los derechos reservados.</p>
+    </div>
+</footer>
+

@@ -1,0 +1,249 @@
+---
+console.log('javascript')
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import '@fontsource-variable/inter';
+import '@fontsource-variable/playfair-display';
+import Cards from '../components/Cards.astro';
+import WhatsAppbutton from '../components/WhatsAppbutton.astro';
+import Services from '../components/Services.astro';
+import { Image } from 'astro:assets';
+import flores from '../assets/img/flores.png';
+import encabezado from '../assets/img/encabezado.jpg';
+import productImage7 from '../assets/products-img/7.jpg'
+import productImage15 from '../assets/products-img/15.jpg'
+import productImage26 from '../assets/products-img/26.jpg'
+import productImage4 from '../assets/products-img/4.jpg'
+import productImage5 from '../assets/products-img/5.jpg'
+import productImage12 from '../assets/products-img/12.jpg'
+import productImage34 from '../assets/products-img/34.jpg'
+import productImage31 from '../assets/products-img/31.jpg'
+
+const cardsData = [
+  { title: 'Regar regularmente', description: 'Mantén el suelo húmedo, pero evita el exceso de agua.' },
+  { title: 'Luz adecuada', description: 'Coloca tus flores en un lugar donde reciban luz solar indirecta.' },
+  { title: 'Control de plagas', description: 'Revisa las hojas y flores periódicamente para detectar plagas.' },
+  { title: 'Fertilización', description: 'Usa fertilizante adecuado una vez al mes para mantener el crecimiento.' },
+  { title: 'Podar flores marchitas', description: 'Elimina flores y hojas secas para estimular el crecimiento.' },
+  { title: 'Ambiente adecuado', description: 'Evita las corrientes de aire fuertes y cambios bruscos de temperatura.' },
+];
+
+
+---
+
+<Layout title="Chrishop">
+	<WhatsAppbutton />
+	<section class="relative text-left bg-green-400 h-screen flex items-center justify-start pl-6 lg:pl-24 overflow-hidden">
+		<!-- Overlay de oscuridad -->
+		<div class="absolute inset-0 bg-black/40 z-10"></div>
+		
+		<!-- Imagen de flores con blur -->
+		<Image 
+		src={flores} 
+		alt="Flores" 
+		class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6/4 sm:w-4/5 lg:w-1/2 h-auto z-20 blur-sm"
+		loading="eager"
+	  />
+		
+		<!-- Wave SVG -->
+		<div class="absolute bottom-0 left-0 w-full z-30 overflow-hidden leading-none">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+				<path 
+					fill="#f2a7be" 
+					fill-opacity="1" 
+					d="M0,0L60,53.3C120,107,240,213,360,250.7C480,288,600,256,720,213.3C840,171,960,117,1080,112C1200,107,1320,149,1380,170.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+				></path>
+			</svg>
+		</div>
+		
+		<!-- Contenido de texto -->
+		 
+		<div class="relative z-40 -mt-12 pl-6 lg:pl-36">
+			<h1 class="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-bold text-white text-shadow" >
+				CHRISHOP
+			</h1>
+			<p class="font-sans my-5 text-base sm:text-lg md:text-xl max-w-md leading-relaxed text-white">
+				En ChrisHop, creemos que cada flor tiene el poder de expresar emociones y marcar momentos especiales en la vida. Nos dedicamos a seleccionar y crear arreglos florales frescos y únicos, personalizados para reflejar tus sentimientos.
+			</p>
+			<!-- Botón añadido -->
+			 <a href="products">
+			 <button type="button" class="text-white bg-pink2  font-medium rounded-lg text-xl px-5 py-2.5 text-center inline-flex items-center  dark:hover:bg-pink ">
+				Ver Productos
+				<svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+				</svg>
+			</button>
+		</a>
+	
+		</div>
+	</section>
+	
+
+	<section class="bg-[#EADDC7] py-16 px-5">
+		<h2 class="font-playfair font-extrabold text-black mb-12 text-4xl text-center">Productos Destacados</h2>
+		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto place-items-center">
+			<!-- Card 1 -->
+			<div id="product-7" class="w-56 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
+				<Image src={productImage7} alt="Product" class="h-64 w-56 object-cover rounded-t-xl" loading="eager" />
+				<div class="px-4 py-3 w-56">
+					<p class="text-lg font-bold text-black truncate capitalize">Corazón Escarlata</p>
+					<span class="text-gray-400 mr-3 uppercase text-xs block">Caja cuadrada con rosas rojas y dedicatoria personalizada.</span>
+				</div>
+			</div>
+	
+			<!-- Card 2 -->
+			<div id="product-15" class="w-56 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+				<Image src={productImage15} alt="Product" class="h-64 w-56 object-cover rounded-t-xl" />
+				<div class="px-4 py-3 w-56">
+					<p class="text-lg font-bold text-black truncate capitalize">Princesa Dulce</p>
+					<span class="text-gray-400 mr-3 uppercase text-xs block">Rosas con barras de chocolate y decoraciones de princesa.</span>
+				</div>
+			</div>
+	
+			<!-- Card 3 -->
+			<div id="product-26" class="w-56 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
+				<Image src={productImage26} alt="Product" class="h-64 w-56 object-cover rounded-t-xl" />
+				<div class="px-4 py-3 w-56">
+					<p class="text-lg font-bold text-black truncate capitalize">Dulce Aniversario</p>
+					<span class="text-gray-400 mr-3 uppercase text-xs block">Caja rectangular repleta de chocolates para una ocasión especial.</span>
+				</div>
+			</div>
+	
+			<!-- Card 4 -->
+			<div id="product-4" class="w-56 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+				<Image src={productImage4} alt="Product" class="h-64 w-56 object-cover rounded-t-xl" loading="eager" />
+				<div class="px-4 py-3 w-56">
+					<p class="text-lg font-bold text-black truncate capitalize">Tesoros de Mamá</p>
+					<span class="text-gray-400 mr-3 uppercase text-xs block">Rosas rojas decoradas con billetes, un detalle especial.</span>
+				</div>
+			</div>
+	
+			<!-- Card 5 -->
+			<div id="product-5" class="w-56 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+				<Image src={productImage5} alt="Product" class="h-64 w-56 object-cover rounded-t-xl" loading="eager" />
+				<div class="px-4 py-3 w-56">
+					<p class="text-lg font-bold text-black truncate capitalize">Sueño Rosa</p>
+					<span class="text-gray-400 mr-3 uppercase text-xs block">Delicado ramo con flores rosas y blancas decorativas.</span>
+				</div>
+			</div>
+	
+			<!-- Card 6 -->
+			<div id="product-12" class="w-56 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="otros">
+				<Image src={productImage12} alt="Product" class="h-64 w-56 object-cover rounded-t-xl" />
+				<div class="px-4 py-3 w-56">
+					<p class="text-lg font-bold text-black truncate capitalize">Abrazo Floral</p>
+					<span class="text-gray-400 mr-3 uppercase text-xs block">Ramo con un peluche gigante de oso.</span>
+				</div>
+			</div>
+	
+			<!-- Card 7 -->
+			<div id="product-34" class="w-56 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+				<Image src={productImage34} alt="Product" class="h-64 w-56 object-cover rounded-t-xl" />
+				<div class="px-4 py-3 w-56">
+					<p class="text-lg font-bold text-black truncate capitalize">Estrellas y Flores</p>
+					<span class="text-gray-400 mr-3 uppercase text-xs block">Inspirado en La Noche Estrellada con tonos azules y amarillos.</span>
+				</div>
+			</div>
+	
+			<!-- Card 8 -->
+			<div id="product-31" class="w-56 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+				<Image src={productImage31} alt="Product" class="h-64 w-56 object-cover rounded-t-xl" />
+				<div class="px-4 py-3 w-56">
+					<p class="text-lg font-bold text-black truncate capitalize">Cumple Rosa</p>
+					<span class="text-gray-400 mr-3 uppercase text-xs block">Ramo de cumpleaños con rosas y decoración especial.</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	  
+	
+
+	<section class="bg-[#EADDC7] py-16 px-5 text-center">
+		<h2 class="font-playfair font-bold text-3xl sm:text-3xl md:text-4xl text-black mb-10">Cómo cuidar tus flores</h2>
+		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+			{cardsData.map(card => (
+				<div>
+				  <Cards title={card.title} description={card.description} />
+				</div>
+			  ))}
+		</div>
+		
+	  </section>
+
+	  <Services />
+	  
+	
+	  <section class="bg-[#EADDC7] py-8 md:py-12 lg:py-16 px-4 md:px-5 text-center min-h-screen">
+		<h2 class="font-playfair font-bold text-2xl sm:text-3xl md:text-4xl lg:text-4xl text-black mb-6 md:mb-8">
+			Ubicación y Horarios de Atención
+		</h2>
+		
+		<!-- Card Container -->
+		<div class="max-w-4xl mx-auto bg-[#FADADD] rounded-lg shadow-lg overflow-hidden flex flex-col lg:flex-row">
+			<!-- Mapa -->
+			<div class="w-full lg:w-1/2 h-[300px] lg:h-auto">
+				<iframe title="ubicacion"
+					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14919.927755227417!2d-86.1828177!3d14.8721246!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6c0304a1b3d063%3A0xfdcbc0c2d5443dfc!2sChrishop!5e0!3m2!1ses-419!2shn!4v1683662310633!5m2!1ses-419!2shn"
+					class="w-full h-full"
+					style="border:0;"
+					allowfullscreen=""
+					loading="lazy">
+				</iframe>
+			</div>
+	
+			<!-- Contenido derecho -->
+			<div class="w-full lg:w-1/2 p-4 md:p-6 flex flex-col justify-between">
+				<!-- Imagen -->
+				<div class="mb-4 md:mb-6">
+					<Image 
+					src={encabezado}
+					alt="encabezado ubicacion"
+					class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg"
+					/>
+				</div>
+	
+				<!-- Horarios -->
+				<div class="space-y-4">
+					<h3 class="font-playfair font-extrabold text-xl sm:text-2xl md:text-3xl text-gray-800 text-center">
+						Horario de Atención
+					</h3>
+					
+					<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-center max-w-md mx-auto">
+						<div class="text-gray-700 text-base md:text-lg">Lun: 9am - 6pm</div>
+						<div class="text-gray-700 text-base md:text-lg">Mar: 9am - 6pm</div>
+						<div class="text-gray-700 text-base md:text-lg">Mie: 9am - 6pm</div>
+						<div class="text-gray-700 text-base md:text-lg">Jue: 9am - 6pm</div>
+						<div class="text-gray-700 text-base md:text-lg">Vie: 9am - 6pm</div>
+						<div class="text-gray-700 text-base md:text-lg">Sab: 9am - 6pm</div>
+					</div>
+					
+					<p class="text-gray-700 font-semibold text-base md:text-lg text-center">
+						Domingo: Cerrado
+					</p>
+				</div>
+	
+				<!-- Botón -->
+				<div class="mt-4 md:mt-6">
+					<a 
+						href="https://www.google.hn/maps/place/Chrishop/@14.8721246,-86.1853926,17z/data=!3m1!4b1!4m6!3m5!1s0x8f6c0304a1b3d063:0xfdcbc0c2d5443dfc!8m2!3d14.8721246!4d-86.1828177!16s%2Fg%2F11l1nsjtg6?hl=es&entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D"
+						target="_blank" 
+						class="inline-flex items-center justify-center text-white bg-black hover:bg-pink-400 px-6 py-3 rounded-md transition duration-300 text-base md:text-lg w-full sm:w-auto"
+					>
+						<i class="fas fa-map-marker-alt mr-2"></i>
+						Cómo llegar
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>	
+
+	<Footer />
+</Layout>
+
+<style>
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+</style>

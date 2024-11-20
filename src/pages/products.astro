@@ -1,0 +1,734 @@
+---
+console.log('javascript')
+
+import Layout from '../layouts/Layout.astro';
+import SearchBar from '../components/SearchBar.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import productImage1 from '../assets/products-img/1.jpg'
+import productImage2 from '../assets/products-img/2.jpg'
+import productImage3 from '../assets/products-img/3.jpg'
+import productImage4 from '../assets/products-img/4.jpg'
+import productImage5 from '../assets/products-img/5.jpg'
+import productImage6 from '../assets/products-img/6.jpg'
+import productImage7 from '../assets/products-img/7.jpg'
+import productImage8 from '../assets/products-img/8.jpg'
+import productImage9 from '../assets/products-img/9.jpg'
+import productImage10 from '../assets/products-img/10.jpg'
+import productImage11 from '../assets/products-img/11.jpg'
+import productImage12 from '../assets/products-img/12.jpg'
+import productImage13 from '../assets/products-img/13.jpg'
+import productImage14 from '../assets/products-img/14.jpg'
+import productImage15 from '../assets/products-img/15.jpg'
+import productImage16 from '../assets/products-img/16.jpg'
+import productImage17 from '../assets/products-img/17.jpg'
+import productImage18 from '../assets/products-img/18.jpg'
+import productImage19 from '../assets/products-img/19.jpg'
+import productImage20 from '../assets/products-img/20.jpg'
+import productImage21 from '../assets/products-img/21.jpg'
+import productImage22 from '../assets/products-img/22.jpg'
+import productImage23 from '../assets/products-img/23.jpg'
+import productImage24 from '../assets/products-img/24.jpg'
+import productImage25 from '../assets/products-img/25.jpg'
+import productImage26 from '../assets/products-img/26.jpg'
+import productImage27 from '../assets/products-img/27.jpg'
+import productImage28 from '../assets/products-img/28.jpg'
+import productImage29 from '../assets/products-img/29.jpg'
+import productImage30 from '../assets/products-img/30.jpg'
+import productImage31 from '../assets/products-img/31.jpg'
+import productImage32 from '../assets/products-img/32.jpg'
+import productImage33 from '../assets/products-img/33.jpg'
+import productImage34 from '../assets/products-img/34.jpg'
+import PriceModal from '../components/PriceModal.astro';
+
+---
+
+<Layout title='Productos'>
+    <SearchBar />
+    <PriceModal />
+
+    
+    <section id="Projects" class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 justify-items-center gap-y-20 gap-x-14 mt-10 mb-5">
+        <div id="product-1" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+            <Image src={productImage1} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
+            <div class="px-4 py-3 w-72">
+                <div class="flex justify-between items-center">
+                    <p class="text-lg font-bold text-black truncate capitalize">Amor Dorado</p>
+                    <span class="text-lg font-semibold text-green-600">Lps.1,850</span>
+                </div>
+                <span class="text-gray-400 mr-3 uppercase text-xs block">Ramo de rosas rojas con lazo y texto dorado</span>
+                <div class="flex items-center justify-between mt-3">
+                    <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Amor Dorado">
+                        Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="product-2" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="otros">
+            <Image src={productImage2} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
+            <div class="px-4 py-3 w-72">
+                <div class="flex justify-between items-center">
+                    <p class="text-lg font-bold text-black truncate capitalize">Encanto Yeti</p>
+                    <span class="text-lg font-semibold text-green-600">Lps.1,350</span>
+                </div>
+                <span class="text-gray-400 mr-3 uppercase text-xs block">Flores combinadas con un adorable Yeti como regalo.</span>
+                <div class="flex items-center justify-between mt-3">
+                    <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Encanto Yeti">
+                        Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="product-3" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+            <Image src={productImage3} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
+            <div class="px-4 py-3 w-72">
+                <div class="flex justify-between items-center">
+                    <p class="text-lg font-bold text-black truncate capitalize">Jardín Vivo</p>
+                    <span class="text-lg font-semibold text-green-600">Lps.600</span>
+                </div>
+                <span class="text-gray-400 mr-3 uppercase text-xs block">Mezcla vibrante de flores de diversos tipos.</span>
+                <div class="flex items-center justify-between mt-3">
+                    <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Jardín Vivo">
+                        Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="product-4" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+            <Image src={productImage4} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
+            <div class="px-4 py-3 w-72">
+                <div class="flex justify-between items-center">
+                    <p class="text-lg font-bold text-black truncate capitalize">Tesoros de Mamá</p>
+                    <span class="text-lg font-semibold text-green-600">Lps.6,000</span>
+                </div>
+                <span class="text-gray-400 mr-3 uppercase text-xs block">Rosas rojas decoradas con billetes, un detalle especial.</span>
+                <div class="flex items-center justify-between mt-3">
+                    <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Tesoros de Mamá">
+                        Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="product-5" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+            <Image src={productImage5} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
+            <div class="px-4 py-3 w-72">
+                <div class="flex justify-between items-center">
+                    <p class="text-lg font-bold text-black truncate capitalize">Sueño Rosa</p>
+                    <span class="text-lg font-semibold text-green-600">Lps.750</span>
+                </div>
+                <span class="text-gray-400 mr-3 uppercase text-xs block">Delicado ramo con flores rosas y blancas decorativas.</span>
+                <div class="flex items-center justify-between mt-3">
+                    <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Sueño Rosa">
+                        Cotizar
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div id="product-6" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="canasta">
+            <Image src={productImage6} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
+            <div class="px-4 py-3 w-72">
+                <div class="flex justify-between items-center">
+                    <p class="text-lg font-bold text-black truncate capitalize">Pet Love</p>
+                    <span class="text-lg font-semibold text-green-600">Lps.1,200</span>
+                </div>
+                <span class="text-gray-400 mr-3 uppercase text-xs block">Canasta con flores y alimentos para consentir a las mascotas.</span>
+                <div class="flex items-center justify-between mt-3">
+                    <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Pet Love">
+                        Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div id="product-7" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
+            <Image src={productImage7} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
+            <div class="px-4 py-3 w-72">
+                <div class="flex justify-between items-center">
+                    <p class="text-lg font-bold text-black truncate capitalize">Corazón Escarlata</p>
+                    <span class="text-lg font-semibold text-green-600">Lps. 1,100</span>
+                </div>
+                <span class="text-gray-400 mr-3 uppercase text-xs block">Caja cuadrada con rosas rojas y dedicatoria personalizada.</span>
+                <div class="flex items-center justify-between mt-3">
+                    <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Corazón Escarlata">
+                        Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="product-8" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+            <Image src={productImage8} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" loading="eager" />
+            <div class="px-4 py-3 w-72">
+                <div class="flex justify-between items-center">
+                    <p class="text-lg font-bold text-black truncate capitalize">Luz Dorada</p>
+                    <span class="text-lg font-semibold text-green-600">Lps.1,500</span>
+                </div>
+                <span class="text-gray-400 mr-3 uppercase text-xs block">Ramo de girasoles que ilumina cualquier momento.</span>
+                <div class="flex items-center justify-between mt-3">
+                    <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Luz Dorada">
+                        Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="product-9" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="otros">
+            <Image src={productImage9} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+            <div class="px-4 py-3 w-72">
+                <div class="flex justify-between items-center">
+                    <p class="text-lg font-bold text-black truncate capitalize">Dulce Calor</p>
+                    <span class="text-lg font-semibold text-green-600">Lps.900</span>
+                </div>
+                <span class="text-gray-400 mr-3 uppercase text-xs block">Pequeño ramo acompañado de un vaso térmico.</span>
+                <div class="flex items-center justify-between mt-3">
+                    <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Dulce Calor">
+                        Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="product-10" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="canasta">
+            <Image src={productImage10} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+            <div class="px-4 py-3 w-72">
+                <div class="flex justify-between items-center">
+                    <p class="text-lg font-bold text-black truncate capitalize">Dulce Romántico</p>
+                    <span class="text-lg font-semibold text-green-600">Lps.1,700</span>
+                </div>
+                <span class="text-gray-400 mr-3 uppercase text-xs block">Canasta con rosas y una selección de chocolates.</span>
+                <div class="flex items-center justify-between mt-3">
+                    <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Dulce Romántico">
+                        Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+    
+        <div id="product-11" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+            <Image src={productImage11} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+            <div class="px-4 py-3 w-72">
+                <div class="flex justify-between items-center">
+                    <p class="text-lg font-bold text-black truncate capitalize">Rosa Pastel</p>
+                    <span class="text-lg font-semibold text-green-600">Lps.1400</span>
+                </div>
+                <span class="text-gray-400 mr-3 uppercase text-xs block">Ramo de tonos suaves y llamativos que destacan su elegancia.</span>
+                <div class="flex items-center justify-between mt-3">
+                    <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Rosa Pastel">
+                        Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="product-12" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="otros">
+            <Image src={productImage12} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+            <div class="px-4 py-3 w-72">
+                <div class="flex justify-between items-center">
+                    <p class="text-lg font-bold text-black truncate capitalize">Abrazo Floral</p>
+                    <span class="text-lg font-semibold text-green-600">Lps.2,100</span>
+                </div>
+                <span class="text-gray-400 mr-3 uppercase text-xs block">Ramo con un peluche gigante de oso.</span>
+                <div class="flex items-center justify-between mt-3">
+                    <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Abrazo Floral">
+                        Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+    <div id="product-13" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+    <Image src={productImage13} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Amor Literario</p>
+            <span class="text-lg font-semibold text-green-600">Lps.1,350</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Ramo de girasoles junto a un libro especial.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Amor Literario">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-14" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+    <Image src={productImage14} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Ternura Rosada</p>
+            <span class="text-lg font-semibold text-green-600">Lps.950</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Elegante ramo de rosas rosadas, delicado y hermoso.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Ternura Rosada">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-15" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+    <Image src={productImage15} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Princesa Dulce</p>
+            <span class="text-lg font-semibold text-green-600">Lps.650</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Rosas con barras de chocolate y decoraciones de princesa.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Princesa Dulce">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-16" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
+    <Image src={productImage16} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Cielo de Chocolate</p>
+            <span class="text-lg font-semibold text-green-600">Lps.1,450</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Caja circular llena de chocolates y un globo de helio.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Cielo de Chocolate">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-17" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+    <Image src={productImage17} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Aura Floral</p>
+            <span class="text-lg font-semibold text-green-600">Lps.1,200</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Ramo de rosas en una envoltura llamativa y moderna.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Aura Floral">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-18" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
+    <Image src={productImage18} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Sueños Delicados</p>
+            <span class="text-lg font-semibold text-green-600">Lps.1,100</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Caja de rosas blancas y rosadas en tonos suaves.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Sueños Delicados">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-19" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
+    <Image src={productImage19} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Perfume de Amor</p>
+            <span class="text-lg font-semibold text-green-600">Lps.3,400</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Perfume, Yeti y chocolates sobre pétalos delicados.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Perfume de Amor">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+
+    
+<div id="product-20" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+    <Image src={productImage20} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Punto de Rosas</p>
+            <span class="text-lg font-semibold text-green-600">Lps.1,900</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Ramo de rosas con estilo circular y muy hermoso.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Punto de Rosas">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-21" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+    <Image src={productImage21} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Eterna Rosa</p>
+            <span class="text-lg font-semibold text-green-600">Lps.850</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Ramo de rosas eternas de un delicado tono rosa.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Eterna Rosa">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-22" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
+    <Image src={productImage22} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Sol y Rosas</p>
+            <span class="text-lg font-semibold text-green-600">Lps.1,200</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Hermosa mezcla de girasoles y rosas para alegrar el dia.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Sol y Rosas">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-23" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+    <Image src={productImage23} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Riqueza Floral</p>
+            <span class="text-lg font-semibold text-green-600">Lps.2,100</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Rosas rojas decoradas con billetes, un regalo único.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Riqueza Floral">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-24" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+    <Image src={productImage24} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Princesa de Chocolate</p>
+            <span class="text-lg font-semibold text-green-600">Lps.600</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Rosas con barras de chocolate y detalles mágicos.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Princesa de Chocolate">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-25" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
+    <Image src={productImage25} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Refugio Literario</p>
+            <span class="text-lg font-semibold text-green-600">Lps.1,700</span>
+        </div>
+
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Cama de flores con un libro como elemento especial.</span>
+
+        <div class="flex items-center justify-between mt-3">
+
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Refugio Literario">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="product-26" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
+    <Image src={productImage26} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Dulce Aniversario</p>
+            <span class="text-lg font-semibold text-green-600">Lps.1,450</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Caja rectangular repleta de chocolates para una ocasión especial.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Dulce Aniversario">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-27" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
+    <Image src={productImage27} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Pasión y Carta</p>
+            <span class="text-lg font-semibold text-green-600">Lps.1,580</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Caja circular con rosas y una dedicatoria personalizada.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Pasión y Carta">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-28" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="otros">
+    <Image src={productImage28} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Corona de Honor</p>
+            <span class="text-lg font-semibold text-green-600">Lps.1,300</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Corona de rosas diseñada para momentos de homenaje.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Corona de Honor">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-29" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+    <Image src={productImage29} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Fragancia Azul</p>
+            <span class="text-lg font-semibold text-green-600">Lps.2,600</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Cama de pétalos con rosas azules y un perfume especial.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Fragancia Azul">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-30" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+    <Image src={productImage30} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Trío de Rosas</p>
+            <span class="text-lg font-semibold text-green-600">Lps.950</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Ramo de rosas blancas, rojas y rosadas.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Trío de Rosas">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div id="product-31" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+    <Image src={productImage31} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Cumple Rosa</p>
+            <span class="text-lg font-semibold text-green-600">Lps.1,350</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Ramo de cumpleaños con rosas y decoración especial.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Cumple Rosa">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-32" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+    <Image src={productImage32} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Mariposa Roja</p>
+            <span class="text-lg font-semibold text-green-600">Lps.1,500</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Diseño único en forma de mariposa con rosas rojas.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Mariposa Roja">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-33" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+    <Image src={productImage33} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Graduación Floral</p>
+            <span class="text-lg font-semibold text-green-600">Lps.1,200</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Ramo decorado con rosas para celebrar logros académicos.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Graduación Floral">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="product-34" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
+    <Image src={productImage34} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+    <div class="px-4 py-3 w-72">
+        <div class="flex justify-between items-center">
+            <p class="text-lg font-bold text-black truncate capitalize">Estrellas y Flores</p>
+            <span class="text-lg font-semibold text-green-600">Lps.1,100</span>
+        </div>
+        <span class="text-gray-400 mr-3 uppercase text-xs block">Inspirado en La Noche Estrellada con tonos azules y amarillos.</span>
+        <div class="flex items-center justify-between mt-3">
+            <button class="text-white bg-pink2 hover:bg-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center cotizar-button" data-product-name="Estrellas y Flores">
+                Cotizar
+            </button>
+        </div>
+    </div>
+</div>
+        
+
+    </section>
+
+    <Footer />
+    <!-- Scripts -->
+    <script>
+        // FILTRAR PRODUCTOS
+const categoryButtons = document.querySelectorAll('.category');
+const productCards = document.querySelectorAll('.product-card') as NodeListOf<HTMLElement>;
+const searchInput = document.querySelector('.search-input') as HTMLInputElement | null;
+
+function filterProducts(category: string, searchText: string) {
+    productCards.forEach(card => {
+        const productCategory = card.getAttribute('data-category');
+        const productName = card.querySelector('p')?.textContent?.toLowerCase() || '';
+
+        const matchesCategory = (category === 'all' || productCategory === category);
+        const matchesSearch = (productName.includes(searchText) || productCategory?.includes(searchText));
+
+        (card as HTMLElement).style.display = matchesCategory && matchesSearch ? 'block' : 'none';
+    });
+}
+
+function updateActiveCategory(selectedButton: Element) {
+    // Remover la clase 'active' de todos los botones
+    categoryButtons.forEach(button => {
+        button.classList.remove('active');
+    });
+    
+    // Agregar la clase 'active' solo al botón seleccionado
+    selectedButton.classList.add('active');
+}
+
+categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const selectedCategory = button.getAttribute('data-category') || 'all';
+        
+        // Actualizar el estado visual del botón
+        updateActiveCategory(button);
+
+        // Filtrar productos
+        if (searchInput) {
+            const searchValue = searchInput.value.toLowerCase();
+            filterProducts(selectedCategory, searchValue);
+        }
+    });
+});
+
+// Manejar el evento de entrada de texto
+searchInput?.addEventListener('input', () => {
+    const searchText = searchInput.value.toLowerCase();
+
+    const activeCategoryButton = document.querySelector('.category.active');
+    const activeCategory = activeCategoryButton?.getAttribute('data-category') || 'all';
+
+    filterProducts(activeCategory, searchText);
+});
+
+
+
+        // COTIZAR
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.cotizar-button');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const productName = button.getAttribute('data-product-name');
+                    if (!productName) {
+                        console.error('El nombre del producto no está definido.');
+                        return;
+                    }
+
+                    const phoneNumber = '50489813631'; // Reemplaza con tu número de WhatsApp
+                    const message = encodeURIComponent(`¡Hola! Me interesa cotizar un producto de su página web: ${productName}.`);
+
+                    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+                });
+            });
+        });
+    </script>
+</Layout>

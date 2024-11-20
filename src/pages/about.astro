@@ -1,0 +1,83 @@
+---
+console.log('javascript')
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import { Image } from 'astro:assets';
+import Nprimary from '../assets/img/Nprimary.jpg';
+import chrishopbanner from '../assets/img/chrishop-banner.jpg';
+---
+
+<Layout title="Sobre Nosotros">
+    <section class="about-us container mx-auto p-8 mt-32">
+        <div class="intro flex flex-col lg:flex-row items-center justify-between gap-8 mb-8">
+            <div class="text-content max-w-lg">
+                <h1 class="text-7xl font-bold mb-4 font-playfair">ChrisHop</h1>
+                <p class="text-lg leading-relaxed text-[#6D6A6A]">
+                    Somos una floristería dedicada a ofrecer las flores más frescas y hermosas para todas las etapas de tu vida.
+                    Desde un simple ramo para iluminar tu hogar, hasta arreglos florales personalizados para bodas, aniversarios o eventos corporativos.
+                </p>
+            </div>
+            <div class="image-content">
+                <Image src={Nprimary} alt="Imagen decorativa" class="w-72 h-auto rounded-lg" loading="eager"/>
+            </div>
+        </div>
+    
+        <div class="reasons my-12">
+            <h2 class="text-3xl font-bold mb-4 font-playfair">¿Por qué elegirnos?</h2>
+            <div class="reasons-grid grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <!-- Aquí van cada una de las razones -->
+                <div>
+                    <strong class="text-xl font-playfair">Calidad</strong>
+                    <p class="text-[#6D6A6A]">En nuestra floristería, seleccionamos cuidadosamente cada flor para asegurar frescura y calidad.</p>
+                </div>
+                <div>
+                    <strong class="rtext text-xl font-playfair">Diseños Personalizados</strong>
+                    <p class="text-[#6D6A6A]">Sabemos que cada evento es único, y por eso ofrecemos diseños personalizados que se ajustan a tus necesidades y preferencias.</p>
+                </div>
+                <div>
+                    <strong class="rtext text-xl font-playfair">Compromiso</strong>
+                    <p class="text-[#6D6A6A]">Nuestra prioridad es tu satisfacción. Nos esforzamos en ofrecer un servicio excepcional desde el primer contacto hasta la entrega final.</p>
+                </div>
+                <div>
+                    <strong class="rtext text-xl font-playfair">Entrega Rápida</strong>
+                    <p class="text-[#6D6A6A]">Nos aseguramos de que tus flores lleguen frescas y a tiempo, para que puedas disfrutar del momento sin preocupaciones.</p>
+                </div>
+                <div>
+                    <strong class="rtext text-xl font-playfair">Amplia Variedad</strong>
+                    <p class="text-[#6D6A6A]">Nos destacamos por la diversidad de nuestro catálogo, que incluye desde flores clásicas hasta exóticas.</p>
+                </div>
+                <div>
+                    <strong class="rtext text-xl font-playfair">Cuidado del Medio Ambiente</strong>
+                    <p class="text-[#6D6A6A]">Nos esforzamos en hacer nuestra parte para cuidar el planeta. Utilizamos técnicas de cultivo sostenibles y empaques ecológicos, minimizando el impacto ambiental.</p>
+                </div>
+                
+            </div>
+        </div>
+    
+        <div class="history my-16 text-center">
+            <h2 class="text-3xl font-bold mb-4 font-playfair">Nuestra Historia</h2>
+            <Image src={chrishopbanner} alt="Banner historia" class="w-full max-w-3xl mx-auto mb-6 rounded-lg" />
+
+            <p class="text-lg leading-relaxed max-w-3xl mx-auto text-[#6D6A6A]">
+                Es una empresa que fue un sueño hecho realidad, empecé a trabajar en línea pero a medida empezó lo de la pandemia decidimos 
+                abrir nuestro o local en Agosto 2020. En línea empecé trayendo solamente ropa y maquillaje por encargo ya a medida nos fueron 
+                solicitando decidimos implementar lo que eran los globos con helio ya que en pandemia muchas personas hacían llegar detalles 
+                entonces comenzamos con los globos hasta que un día una clienta nos preguntó si teníamos detalles con flores naturales y es 
+                ahí desde donde empezamos a trabajar con flor natural a la semana después. Siendo una principiante decidí abrir mi negocio con 
+                lo poco que tenia en un local vació que tenía mi abuela a la par de mi casa y desde ahí empecé a trabajar y innovando más.
+            </p>
+        </div>
+        
+        <div class="mission-vision flex flex-col sm:flex-row justify-around my-12 gap-8">
+            <div class="card bg-white p-6 rounded-lg shadow-md w-full sm:w-5/12 text-center">
+                <h3 class="text-2xl font-bold mb-4 font-playfair">Nuestra Misión</h3>
+                <p>Satisfacer la necesidad del cliente expresando sus sentimientos con flores, popularizando el precio de las mismas.</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow-md w-full sm:w-5/12 text-center">
+                <h3 class="text-2xl font-bold font-playfair mb-4">Nuestra Visión</h3>
+                <p>Que todas las personas expresen sus sentimientos con flores, distinguiéndonos por ofrecer a nuestros clientes todo el año los mejores diseños, precios sin perder la originalidad y calidad en el producto.</p>
+            </div>
+        </div>
+    </section>
+    <Footer />
+</Layout>

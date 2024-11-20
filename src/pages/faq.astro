@@ -1,0 +1,135 @@
+---
+console.log('javascript');
+import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import faq from '../assets/img/faq.png';
+---
+
+<Layout title="Preguntas Frecuentes">
+    <section class="faq-container flex flex-col lg:flex-row justify-center items-center min-h-[calc(100vh-6rem)] px-4 lg:px-8 pt-28 lg:pt-24 pb-16 relative z-10">
+
+        <div class="faq-image w-full lg:w-1/2 flex justify-center items-center mb-12 lg:mb-0 mt-8 lg:mt-0">
+            <Image src={faq} alt="img-faq" class="max-w-[90%] h-auto" loading="eager">
+        </div>
+        
+        <!-- Sección de preguntas -->
+        <div class="questions w-full lg:w-1/2 max-w-2xl mx-auto overflow-y-auto max-h-[calc(100vh-180px)] px-4">
+            <!-- Artículo de cada pregunta -->
+            <article class="question bg-white rounded-xl shadow-lg p-6 mb-6 transition-all duration-300 hover:shadow-xl">
+                <div class="question-title flex justify-between items-center text-gray-900 pb-4">
+                    <p class="text-lg font-playfair font-bold leading-tight">¿Cuánto tiempo duran las flores frescas?</p>
+                    <button type="button" class="question-btn text-pink-400 text-2xl cursor-pointer transition-transform duration-300 hover:rotate-90 focus:outline-none">
+                        <span class="plus-icon">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        <span class="minus-icon hidden">
+                            <i class="fas fa-minus"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text pt-4 border-t border-gray-200 hidden">
+                    <p class="text-gray-700 leading-relaxed">La duración de las flores depende de su tipo y del cuidado que reciban. En general, nuestras flores frescas pueden durar de 5 a 7 días con el cuidado adecuado. Proveemos recomendaciones de cuidado para cada arreglo, asegurando que puedas disfrutarlas el mayor tiempo posible.</p>
+                </div>
+            </article>
+
+            <article class="question bg-white rounded-xl shadow-lg p-6 mb-6 transition-all duration-300 hover:shadow-xl">
+                <div class="question-title flex justify-between items-center text-gray-900 pb-4">
+                    <p class="text-lg font-playfair font-bold leading-tight">¿Ofrecen entrega a domicilio?</p>
+                    <button type="button" class="question-btn text-pink-400 text-2xl cursor-pointer transition-transform duration-300 hover:rotate-90 focus:outline-none">
+                        <span class="plus-icon">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        <span class="minus-icon hidden">
+                            <i class="fas fa-minus"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text pt-4 border-t border-gray-200 hidden">
+                    <p class="text-gray-700 leading-relaxed">Sí, ofrecemos entrega a domicilio en toda el área local y zonas cercanas. Nos aseguramos de que las flores lleguen frescas y en perfectas condiciones. Puedes programar la entrega para una fecha y hora específica al hacer tu pedido.</p>
+                </div>
+            </article>
+
+            <article class="question bg-white rounded-xl shadow-lg p-6 mb-6 transition-all duration-300 hover:shadow-xl">
+                <div class="question-title flex justify-between items-center text-gray-900 pb-4">
+                    <p class="text-lg font-playfair font-bold leading-tight">¿Puedo hacer un pedido personalizado?</p>
+                    <button type="button" class="question-btn text-pink-400 text-2xl cursor-pointer transition-transform duration-300 hover:rotate-90 focus:outline-none">
+                        <span class="plus-icon">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        <span class="minus-icon hidden">
+                            <i class="fas fa-minus"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text pt-4 border-t border-gray-200 hidden">
+                    <p class="text-gray-700 leading-relaxed">¡Por supuesto! Nos encanta trabajar en pedidos personalizados para adaptarnos a tus gustos y necesidades. Solo dinos qué tipo de flores, colores o estilo prefieres, y nuestros floristas se encargarán de diseñar algo especial para ti.</p>
+                </div>
+            </article>
+
+            <article class="question bg-white rounded-xl shadow-lg p-6 mb-6 transition-all duration-300 hover:shadow-xl">
+                <div class="question-title flex justify-between items-center text-gray-900 pb-4">
+                    <p class="text-lg font-playfair font-bold leading-tight">¿Cuál es el costo de envío?</p>
+                    <button type="button" class="question-btn text-pink-400 text-2xl cursor-pointer transition-transform duration-300 hover:rotate-90 focus:outline-none">
+                        <span class="plus-icon">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        <span class="minus-icon hidden">
+                            <i class="fas fa-minus"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text pt-4 border-t border-gray-200 hidden">
+                    <p class="text-gray-700 leading-relaxed">El costo de envío depende de la ubicación de entrega. Ofrecemos tarifas competitivas y algunas veces promociones de envío gratuito en áreas locales.</p>
+                </div>
+            </article>
+
+            <article class="question bg-white rounded-xl shadow-lg p-6 mb-6 transition-all duration-300 hover:shadow-xl">
+                <div class="question-title flex justify-between items-center text-gray-900 pb-4">
+                    <p class="text-lg font-playfair font-bold leading-tight">¿Cómo puedo cuidar mis flores para que duren más tiempo?</p>
+                    <button type="button" class="question-btn text-pink-400 text-2xl cursor-pointer transition-transform duration-300 hover:rotate-90 focus:outline-none">
+                        <span class="plus-icon">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        <span class="minus-icon hidden">
+                            <i class="fas fa-minus"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text pt-4 border-t border-gray-200 hidden">
+                    <p class="text-gray-700 leading-relaxed">Para que tus flores duren más, recomendamos cambiar el agua cada dos días, cortar los tallos en ángulo y mantenerlas en un lugar fresco, lejos de la luz solar directa y corrientes de aire.</p>
+                </div>
+            </article>
+            <!-- Repetir otras preguntas aquí -->
+        </div>
+    </section>
+    
+    <!-- Onda decorativa -->
+    <div class="wave fixed bottom-0 left-0 w-full -z-10 overflow-hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#f2a7be" fill-opacity="1" d="M0,0L60,53.3C120,107,240,213,360,250.7C480,288,600,256,720,213.3C840,171,960,117,1080,112C1200,107,1320,149,1380,170.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- Bloque de script embebido -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const btns = document.querySelectorAll('.question-btn');
+    btns.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            const question = (e.currentTarget as HTMLElement).closest('.question');
+            if (question) {
+                const text = question.querySelector('.question-text');
+                const plusIcon = question.querySelector('.plus-icon');
+                const minusIcon = question.querySelector('.minus-icon');
+
+                // Cambia la visibilidad de los elementos
+                text?.classList.toggle('hidden');
+                plusIcon?.classList.toggle('hidden');
+                minusIcon?.classList.toggle('hidden');
+            }
+        });
+    });
+});
+
+    </script>
+</Layout>

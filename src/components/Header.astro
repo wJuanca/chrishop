@@ -1,0 +1,230 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/icons/logo.png';
+---
+<header class="fixed top-0 left-0 w-full py-4 z-50 text-gray-900">
+  <nav id="navbar" class="border-white md:bg-transparent dark:border-gray-700 transition-all duration-500">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div class="flex items-center gap-4">
+        <!-- Logo -->
+        <div class="w-12 h-12 rounded-full overflow-hidden">
+          <Image src={logo} 
+            alt="Logo" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <!-- Nombre - Manteniendo el tamaño original -->
+        <a href="/" class="flex items-center">
+          <span class="self-center text-5xl md:text-6xl font-semibold font-greatvibes whitespace-nowrap text-pink2 text-shadow-lg hover:scale-105 transition-transform duration-300">Chrishop</span>
+        </a>
+      </div>
+
+      <!-- Hamburguesa - Ajustado para mostrarse en más breakpoints -->
+      <button 
+        data-collapse-toggle="navbar-solid-bg" 
+        type="button" 
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-white dark:hover:bg-pink dark:focus:ring-pink transition-all"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
+      </button>
+
+      <!-- Navegación - Ajustado para mostrarse solo en pantallas más grandes -->
+      <div class="hidden w-full lg:block lg:w-auto" id="navbar-solid-bg">
+        <ul class="flex flex-col font-semibold mt-4 rounded-lg lg:flex-row lg:mt-0 lg:border-0 lg:space-x-6 rtl:space-x-reverse transition-all duration-300">
+          <li><a href="/nojava/" class="nav-link">Inicio</a></li>
+          <li><a href="/nojava/products" class="nav-link">Productos</a></li>
+          <li><a href="/nojava/shipping" class="nav-link">Envios</a></li>
+          <li><a href="/nojava/contact" class="nav-link">Contactanos</a></li>
+          <li><a href="/nojava/about" class="nav-link">Nosotros</a></li>
+          <li><a href="/nojava/faq" class="nav-link">FAQ</a></li>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+  .nav-link {
+    @apply block py-2 px-3 lg:p-0 text-gray-900 dark:text-white hover:text-pink transition-all duration-300 font-playfair text-lg lg:text-xl text-shadow-lg hover:scale-105;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.5s ease-in-out;
+    background: transparent;
+  }
+
+  header.scrolled {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  header.scrolled .nav-link {
+    @apply text-black;
+  }
+
+  header.scrolled::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: -1;
+  }
+
+  header::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 255, 255, 0.1)
+    );
+    pointer-events: none;
+  }
+
+  header.scrolled::after {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 255, 255, 0.3)
+    );
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .text-shadow-lg {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Ajustes específicos para diferentes pantallas */
+  @media (min-width: 1280px) {
+    .nav-link {
+      @apply text-2xl;
+    }
+  }
+
+  @media (max-width: 1279px) {
+    #navbar-solid-bg {
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+  }
+</style>
+
+
+
+<script>
+  // Función para inicializar el menú móvil
+  function initMenu() {
+  const menuButton = document.querySelector('[data-collapse-toggle="navbar-solid-bg"]');
+  const menu = document.getElementById('navbar-solid-bg');
+  const navbar = document.getElementById('navbar');
+  const navbarContainer = document.querySelector('.max-w-screen-xl');
+
+  if (menuButton && menu && navbar) {
+    // Cerrar el menú inicialmente
+    menu.classList.add('hidden');
+    menuButton.setAttribute('aria-expanded', 'false');
+
+    menuButton.addEventListener('click', function () {
+      const isMenuOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isMenuOpen));  // Convertir booleano a string
+      menu.classList.toggle('hidden', isMenuOpen);
+
+      if (!isMenuOpen) {
+        if (navbarContainer) {  // Verificación de que navbarContainer no es null
+          navbarContainer.classList.add('flex-col');
+        }
+        navbar.classList.add('dark:bg-pink2');
+      } else {
+        if (navbarContainer) {  // Verificación de que navbarContainer no es null
+          navbarContainer.classList.remove('flex-col');
+        }
+        navbar.classList.remove('dark:bg-pink2');
+      }
+    });
+
+    // Cerrar el menú al hacer clic en un enlace
+    const menuLinks = menu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        menu.classList.add('hidden');
+        menuButton.setAttribute('aria-expanded', 'false');
+        if (navbarContainer) {  // Verificación de que navbarContainer no es null
+          navbarContainer.classList.remove('flex-col');
+        }
+        navbar.classList.remove('dark:bg-pink2');
+      });
+    });
+  }
+}
+
+function initScrollEffect() {
+  const header = document.querySelector('header');
+  const scrollThreshold = 50;
+
+  window.addEventListener('scroll', function () {
+    if (header) {  // Verificación de que header no es null
+      if (window.scrollY > scrollThreshold) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+  });
+
+  // Agregar efecto de scroll suave a los anclajes
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    e.preventDefault();
+    const href = anchor.getAttribute('href');
+    
+    // Verifica si href no es null antes de pasarle el valor a querySelector
+    if (href) {
+      const targetElement = document.querySelector(href);
+      targetElement?.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  });
+});
+
+
+}
+
+// Inicializar funcionalidad al cargar la página
+document.addEventListener('DOMContentLoaded', function () {
+  initMenu();
+  initScrollEffect();
+});
+
+// Escucha el evento de transiciones de Astro
+document.addEventListener('astro:after-swap', function () {
+  initMenu();
+  initScrollEffect();
+});
+
+</script>

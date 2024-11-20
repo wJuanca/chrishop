@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Footer from "../components/Footer.astro"
+import { Image } from 'astro:assets';
+import proceso from '../assets/icons/Proceso.png';
+import cash from '../assets/icons/cash.png';
+import transaction from '../assets/icons/transaction.png';
+import bankcards from '../assets/icons/bank-cards.png';
+
+console.log('javascript')
+---
+
+<Layout title="Envios">
+    <section class="max-w-4xl mx-auto px-4 py-8 text-[#4A4A4A] font-playfair mt-28">
+        <!-- Proceso de Envíos -->
+        <div class="mb-8">
+            <h2 class="text-4xl font-bold mb-6 text-black">Proceso de Envíos</h2>
+            <div class="flex flex-col md:flex-row gap-6 items-start">
+                <p class="text-[#6D6A6A] font-sans leading-relaxed md:w-3/5">
+                    Para realizar un pedido, puedes elegir entre las imágenes de pedidos anteriores o 
+                    solicitar un diseño personalizado y enviarlo a nuestro WhatsApp. Verificaremos tu solicitud 
+                    y te proporcionaremos los precios correspondientes. Si estás de acuerdo, te pediremos tus datos 
+                    personales, como nombre, número de teléfono y dirección, para proceder con la preparación de tu pedido. 
+                    Utilizaremos el medio de transporte más adecuado para enviarlo y te notificaremos cuando esté en camino 
+                    y listo para ser recibido en tu domicilio o en la ubicación que hayas proporcionado. Nuestro objetivo es 
+                    ofrecerte una experiencia de compra cómoda y satisfactoria desde el inicio hasta la entrega.
+                </p>
+                <Image src={proceso} alt="Proceso de Envíos" class="w-full md:w-2/5 object-cover rounded-lg" loading="eager" />
+            </div>
+        </div>
+    
+        <hr class="border-t border-gray-800 border-opacity-30 my-8">
+
+    
+        <!-- Métodos de Pago -->
+        <div class="mb-8">
+            <h2 class="text-4xl font-bold font-playfair mb-6 text-black">Métodos de Pago</h2>
+            <div class="flex flex-col md:flex-row gap-6 items-start">
+                <p class="text-[#6D6A6A] leading-relaxed font-sans md:w-3/5">
+                    Ofrecemos diferentes opciones de pago para tu comodidad: efectivo, 
+                    transferencia bancaria y pago con tarjeta de crédito o débito. 
+                    Puedes elegir cualquiera de estos métodos al momento de realizar 
+                    tu pedido, asegurando una experiencia de pago rápida y sin complicaciones. 
+                    Tú decides cuál opción se adapta mejor a tus necesidades.
+                </p>
+                <div class="w-full md:w-2/5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <Image src={cash} alt="Efectivo" class="w-10 h-10" loading="eager"/>
+                        <span class="font-sans font-2xl">Efectivo</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <Image src={transaction} alt="Transferencia" class="w-10 h-10" loading="eager"/>
+                        <span class="font-sans font-2xl">Transferencia</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <Image src={bankcards} alt="Tarjeta" class="w-10 h-10" loading="eager"/>
+                        <span class="font-sans font-2xl">Tarjeta de Crédito o Débito</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <hr class="border-t border-gray-800 border-opacity-30 my-8">
+    
+        <!-- Ubicación -->
+        <div class="mb-8">
+            <h2 class="text-4xl font-semibold font-playfair mb-6 text-black">Tienda Física</h2>
+            <div class="flex flex-col md:flex-row gap-6 items-start">
+                <p class="text-[#6D6A6A] leading-relaxed font-sans md:w-3/5">
+                    Puedes realizar tu pedido y recogerlo directamente en nuestra tienda física. 
+                    También tienes la opción de visitar la tienda para explorar y adquirir productos 
+                    disponibles al instante, sin necesidad de esperar. Te ofrecemos una experiencia 
+                    práctica y rápida para que encuentres lo que necesitas.
+                </p>
+                <div class="w-full md:w-2/5">
+                    <iframe title="ubi-fisica"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.1636539826263!2d-86.18281769999999!3d14.872124600000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6c0304a1b3d063%3A0xfdcbc0c2d5443dfc!2sChrishop!5e0!3m2!1ses!2shn!4v1730925079938!5m2!1ses!2shn"
+                        class="w-full h-[200px] rounded-lg"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="eager">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+</Layout>
