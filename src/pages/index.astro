@@ -82,9 +82,10 @@ const cardsData = [
 	<section class="bg-[#EADDC7] py-16 px-5">
 		<h2 class="font-playfair font-extrabold text-black mb-12 text-4xl text-center">Productos Destacados</h2>
 		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto place-items-center">
+			
 			<!-- Card 1 -->
 			<div id="product-7" class="w-56 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="caja">
-				<Image src={productImage7} alt="Product" class="h-64 w-56 object-cover rounded-t-xl" loading="eager" />
+				<Image src={productImage7} alt="Product" class="h-64 w-56 object-cover rounded-t-xl" loading="lazy" />
 				<div class="px-4 py-3 w-56">
 					<p class="text-lg font-bold text-black truncate capitalize">Corazón Escarlata</p>
 					<span class="text-gray-400 mr-3 uppercase text-xs block">Caja cuadrada con rosas rojas y dedicatoria personalizada.</span>
@@ -111,7 +112,7 @@ const cardsData = [
 	
 			<!-- Card 4 -->
 			<div id="product-4" class="w-56 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
-				<Image src={productImage4} alt="Product" class="h-64 w-56 object-cover rounded-t-xl" loading="eager" />
+				<Image src={productImage4} alt="Product" class="h-64 w-56 object-cover rounded-t-xl" loading="lazy" />
 				<div class="px-4 py-3 w-56">
 					<p class="text-lg font-bold text-black truncate capitalize">Tesoros de Mamá</p>
 					<span class="text-gray-400 mr-3 uppercase text-xs block">Rosas rojas decoradas con billetes, un detalle especial.</span>
@@ -120,7 +121,7 @@ const cardsData = [
 	
 			<!-- Card 5 -->
 			<div id="product-5" class="w-56 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl product-card" data-category="ramo">
-				<Image src={productImage5} alt="Product" class="h-64 w-56 object-cover rounded-t-xl" loading="eager" />
+				<Image src={productImage5} alt="Product" class="h-64 w-56 object-cover rounded-t-xl" loading="lazy" />
 				<div class="px-4 py-3 w-56">
 					<p class="text-lg font-bold text-black truncate capitalize">Sueño Rosa</p>
 					<span class="text-gray-400 mr-3 uppercase text-xs block">Delicado ramo con flores rosas y blancas decorativas.</span>
